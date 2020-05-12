@@ -9,5 +9,5 @@ public class OnlineClinicApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(OnlineClinicApplication.class, args);
 	}
-
+// checking
 }
