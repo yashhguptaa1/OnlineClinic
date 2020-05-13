@@ -1,6 +1,5 @@
 package com.yg.OnlineClinic;
 
-import com.yg.OnlineClinic.controllers.MyController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,11 +16,8 @@ public class OnlineClinicApplication {
 		 */
 
 		ApplicationContext ctx=SpringApplication.run(OnlineClinicApplication.class, args);
-		MyController myController=(MyController)ctx.getBean("myController");
 
-		String greeting=myController.Hello();
 
-		System.out.println(greeting);
 
 	}
 }

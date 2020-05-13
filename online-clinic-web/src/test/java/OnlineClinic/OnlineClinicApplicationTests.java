@@ -1,4 +1,4 @@
-package com.yg.OnlineClinic;
+package OnlineClinic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
