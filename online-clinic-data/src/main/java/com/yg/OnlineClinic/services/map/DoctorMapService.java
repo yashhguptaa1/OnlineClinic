@@ -1,11 +1,11 @@
 package com.yg.OnlineClinic.services.map;
 
 import com.yg.OnlineClinic.model.Doctor;
-import com.yg.OnlineClinic.services.CrudService;
+import com.yg.OnlineClinic.services.DoctorService;
 
 import java.util.Set;
 
-public class DoctorMapService extends AbstractMapService<Doctor,Long> implements CrudService<Doctor,Long> {
+public class DoctorMapService extends AbstractMapService<Doctor,Long> implements DoctorService {
     @Override
     public Set<Doctor> findAll() {
         return super.findAll();

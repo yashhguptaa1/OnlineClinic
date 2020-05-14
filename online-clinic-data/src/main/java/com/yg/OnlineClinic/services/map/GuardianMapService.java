@@ -1,11 +1,11 @@
 package com.yg.OnlineClinic.services.map;
 
 import com.yg.OnlineClinic.model.Guardian;
-import com.yg.OnlineClinic.services.CrudService;
+import com.yg.OnlineClinic.services.GuardianService;
 
 import java.util.Set;
 
-public class GuardianMapService extends AbstractMapService<Guardian,Long> implements CrudService<Guardian,Long> {
+public class GuardianMapService extends AbstractMapService<Guardian,Long> implements GuardianService {
     @Override
     public Set<Guardian> findAll() {
         return super.findAll();
@@ -19,6 +19,11 @@ public class GuardianMapService extends AbstractMapService<Guardian,Long> implem
     @Override
     public Guardian save(Guardian object) {
         return super.save(object.getId(),object);
+    }
+
+    @Override
+    public Guardian findByLastName(String lastName) {
+        return null;
     }
 
     @Override
