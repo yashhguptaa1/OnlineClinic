@@ -20,7 +20,7 @@ public class GuardianMapService extends AbstractMapService<Guardian,Long> implem
 
     @Override
     public Guardian save(Guardian object) {
-        return super.save(object.getId(),object);
+        return super.save(object);
     }
 
     @Override

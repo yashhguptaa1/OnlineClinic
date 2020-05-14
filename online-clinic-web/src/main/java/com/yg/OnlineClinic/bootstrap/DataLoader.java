@@ -28,14 +28,12 @@ public class DataLoader implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         Guardian guardian1=new Guardian();
-        guardian1.setId(1L); // from extending BaseEntity
         guardian1.setFirstName("Sunit"); //from extending Person
         guardian1.setLastName("Gupta");//from extending Person
 
         guardianService.save(guardian1);// from extending CrudService
 
         Guardian guardian2=new Guardian();
-        guardian2.setId(2L);
         guardian2.setFirstName("Sapna");
         guardian2.setLastName("Gupta");
 
@@ -46,7 +44,6 @@ public class DataLoader implements CommandLineRunner {
 
 
         Doctor doctor1=new Doctor();
-        doctor1.setId(1L);
         doctor1.setFirstName("Anmol");
         doctor1.setLastName("Malhotra");
 
@@ -54,7 +51,6 @@ public class DataLoader implements CommandLineRunner {
 
 
         Doctor doctor2=new Doctor();
-        doctor2.setId(2L);
         doctor2.setFirstName("Gurnoor");
         doctor2.setLastName("Kaur");
 

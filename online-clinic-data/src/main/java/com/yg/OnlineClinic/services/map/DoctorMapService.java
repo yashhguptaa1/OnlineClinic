@@ -20,7 +20,7 @@ public class DoctorMapService extends AbstractMapService<Doctor,Long> implements
 
     @Override
     public Doctor save(Doctor object) {
-        return super.save(object.getId(),object);
+        return super.save(object);
     }
 
     @Override
