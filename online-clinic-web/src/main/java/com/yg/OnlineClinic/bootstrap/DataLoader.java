@@ -14,7 +14,7 @@ public class DataLoader implements CommandLineRunner {
     private final GuardianService guardianService;
     private final DoctorService doctorService;
 
-    // dont need to use @autowire when using this constructor
+    // dont need to use @autowire as we used spring to create this constructor
     public DataLoader(GuardianService guardianService, DoctorService doctorService)
     {
 
@@ -35,9 +35,9 @@ public class DataLoader implements CommandLineRunner {
         guardianService.save(guardian1);// from extending CrudService
 
         Guardian guardian2=new Guardian();
-        guardian1.setId(1L);
-        guardian1.setFirstName("Sapna");
-        guardian1.setLastName("Gupta");
+        guardian2.setId(2L);
+        guardian2.setFirstName("Sapna");
+        guardian2.setLastName("Gupta");
 
         guardianService.save(guardian2);
 
@@ -54,7 +54,7 @@ public class DataLoader implements CommandLineRunner {
 
 
         Doctor doctor2=new Doctor();
-        doctor2.setId(1L);
+        doctor2.setId(2L);
         doctor2.setFirstName("Gurnoor");
         doctor2.setLastName("Kaur");
 

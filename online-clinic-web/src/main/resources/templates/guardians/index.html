@@ -5,7 +5,26 @@
     <title>List of Doctors</title>
 </head>
 <body>
-<h1 th:text=" 'List of Guardians' ">Guardians..</h1>
+<!--/*@thymesVar id="guardian" type="com.yg.OnlineClinic.model.Guardian"*/-->
+
+    <h1 th:text=" 'List of Guardians' ">Guardians List</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th >Id</th>
+            <th >First Name</th>
+            <th >Last Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="guardian : ${guardians}">
+            <td th:text="${guardian.id}">1</td>
+            <td th:text="${guardian.firstName}">Joe</td>
+            <td th:text="${guardian.lastName}">Buck</td>
+        </tr>
+        </tbody>
+    </table>
+
 
 
 

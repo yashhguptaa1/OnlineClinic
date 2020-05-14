@@ -15,6 +15,7 @@ public abstract class AbstractMapService <T,ID>{
 
     Set<T>findAll()
     {
+        System.out.println(map);
         return new HashSet<>(map.values());
 
     }
