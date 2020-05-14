@@ -2,9 +2,11 @@ package com.yg.OnlineClinic.services.map;
 
 import com.yg.OnlineClinic.model.Guardian;
 import com.yg.OnlineClinic.services.GuardianService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class GuardianMapService extends AbstractMapService<Guardian,Long> implements GuardianService {
     @Override
     public Set<Guardian> findAll() {

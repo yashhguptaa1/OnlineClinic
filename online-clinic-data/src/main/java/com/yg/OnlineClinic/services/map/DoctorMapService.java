@@ -2,9 +2,11 @@ package com.yg.OnlineClinic.services.map;
 
 import com.yg.OnlineClinic.model.Doctor;
 import com.yg.OnlineClinic.services.DoctorService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class DoctorMapService extends AbstractMapService<Doctor,Long> implements DoctorService {
     @Override
     public Set<Doctor> findAll() {

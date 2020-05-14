@@ -4,8 +4,6 @@ import com.yg.OnlineClinic.model.Doctor;
 import com.yg.OnlineClinic.model.Guardian;
 import com.yg.OnlineClinic.services.DoctorService;
 import com.yg.OnlineClinic.services.GuardianService;
-import com.yg.OnlineClinic.services.map.DoctorMapService;
-import com.yg.OnlineClinic.services.map.GuardianMapService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -16,11 +14,13 @@ public class DataLoader implements CommandLineRunner {
     private final GuardianService guardianService;
     private final DoctorService doctorService;
 
-    public DataLoader()
+    // dont need to use @autowire when using this constructor
+    public DataLoader(GuardianService guardianService, DoctorService doctorService)
     {
-        guardianService=new GuardianMapService();
-        doctorService=new DoctorMapService();
 
+
+        this.guardianService = guardianService;
+        this.doctorService = doctorService;
     }
 
 
