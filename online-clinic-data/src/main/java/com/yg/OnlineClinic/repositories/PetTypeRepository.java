@@ -1,4 +1,7 @@
 package com.yg.OnlineClinic.repositories;
 
-public interface PetTypeRepository {
+import com.yg.OnlineClinic.model.PetType;
+import org.springframework.data.repository.CrudRepository;
+
+public interface PetTypeRepository extends CrudRepository<PetType,Long> {
 }
