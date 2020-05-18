@@ -1,10 +1,7 @@
 package com.yg.OnlineClinic.bootstrap;
 
 import com.yg.OnlineClinic.model.*;
-import com.yg.OnlineClinic.services.DoctorService;
-import com.yg.OnlineClinic.services.GuardianService;
-import com.yg.OnlineClinic.services.PetTypeService;
-import com.yg.OnlineClinic.services.SpecialityService;
+import com.yg.OnlineClinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -18,16 +15,18 @@ public class DataLoader implements CommandLineRunner {
     private final DoctorService doctorService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
 
     // dont need to use @autowire as we used spring to create this constructor
 
 
-    public DataLoader(GuardianService guardianService, DoctorService doctorService, PetTypeService petTypeService, SpecialityService specialityService) {
+    public DataLoader(GuardianService guardianService, DoctorService doctorService, PetTypeService petTypeService, SpecialityService specialityService, VisitService visitService) {
         this.guardianService = guardianService;
         this.doctorService = doctorService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -95,6 +94,13 @@ public class DataLoader implements CommandLineRunner {
 
 
         guardianService.save(guardian2);
+
+        Visit catVisit=new Visit();
+        catVisit.setPet(mikesPet);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy kitty");
+
+        visitService.save(catVisit);
 
         System.out.println("Loaded Guardians....");
 
