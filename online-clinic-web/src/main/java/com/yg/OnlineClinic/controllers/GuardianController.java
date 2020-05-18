@@ -28,4 +28,9 @@ public class GuardianController {
         model.addAttribute("guardians",guardianService.findAll());
         return "guardians/index";
     }
+
+    @RequestMapping("/owners/find")
+    public String findGuardians(){
+        return "notimplemented";
+    }
 }
