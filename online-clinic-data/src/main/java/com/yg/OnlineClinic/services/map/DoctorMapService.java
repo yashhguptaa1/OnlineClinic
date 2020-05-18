@@ -4,11 +4,13 @@ import com.yg.OnlineClinic.model.Doctor;
 import com.yg.OnlineClinic.model.Speciality;
 import com.yg.OnlineClinic.services.DoctorService;
 import com.yg.OnlineClinic.services.SpecialityService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class DoctorMapService extends AbstractMapService<Doctor,Long> implements DoctorService {
 
     private final SpecialityService specialityService;

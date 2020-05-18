@@ -5,11 +5,13 @@ import com.yg.OnlineClinic.model.Pet;
 import com.yg.OnlineClinic.services.GuardianService;
 import com.yg.OnlineClinic.services.PetService;
 import com.yg.OnlineClinic.services.PetTypeService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class GuardianMapService extends AbstractMapService<Guardian,Long> implements GuardianService {
 
     private final PetTypeService petTypeService;
