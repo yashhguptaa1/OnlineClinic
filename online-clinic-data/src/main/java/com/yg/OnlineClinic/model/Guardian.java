@@ -1,5 +1,6 @@
 package com.yg.OnlineClinic.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Guardian extends Person{
@@ -8,7 +9,7 @@ public class Guardian extends Person{
     private String city;
     private String telephone;
 
-    private Set<Pet>pets;
+    private Set<Pet>pets=new HashSet<>();
 
     public String getAddress() {
         return address;
