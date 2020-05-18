@@ -1,9 +1,17 @@
 package com.yg.OnlineClinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "specialities")
 public class Speciality extends BaseEntity {
 
+    @Column(name = "first_name")
     public String description;
 
+    @Column(name = "last_name")
     public String getDescription() {
         return description;
     }
