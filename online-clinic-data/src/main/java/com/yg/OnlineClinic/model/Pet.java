@@ -1,12 +1,24 @@
 package com.yg.OnlineClinic.model;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "pets")
 public class Pet extends BaseEntity {
 
+    @ManyToOne
+    @JoinColumn(name = "type_id")
     private PetType petType;
+
+    @ManyToOne
+    @JoinColumn(name = "guardian_id")
     private Guardian guardian;
+
+    @Column(name = "birth_date")
     private LocalDate birthDate;
+
+    @Column(name = "name")
     private String Name;
 
     public String getName() {
