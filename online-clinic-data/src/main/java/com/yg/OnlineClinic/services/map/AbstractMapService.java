@@ -5,7 +5,8 @@ import com.yg.OnlineClinic.model.BaseEntity;
 import java.util.*;
 
 /*
-
+These Map Services have been built with purpose of using normal HashMap collections as way of
+acting as a DB instead of using actual DB such as Mysql
 
  */
 public abstract class AbstractMapService <T extends BaseEntity,ID extends Long>{
@@ -14,7 +15,7 @@ public abstract class AbstractMapService <T extends BaseEntity,ID extends Long>{
 
     Set<T>findAll()
     {
-        System.out.println(map);
+        //System.out.println(map);
         return new HashSet<>(map.values());
 
     }

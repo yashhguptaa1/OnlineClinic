@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+
 @Service
 @Profile({"default","map"})
 public class GuardianMapService extends AbstractMapService<Guardian,Long> implements GuardianService {
@@ -67,7 +68,12 @@ public class GuardianMapService extends AbstractMapService<Guardian,Long> implem
 
     @Override
     public Guardian findByLastName(String lastName) {
-        return null;
+
+        return this.findAll()
+                .stream()
+                .filter(guardian -> guardian.getLastName().equalsIgnoreCase(lastName))
+                .findFirst()
+                .orElse(null);
     }
 
     @Override

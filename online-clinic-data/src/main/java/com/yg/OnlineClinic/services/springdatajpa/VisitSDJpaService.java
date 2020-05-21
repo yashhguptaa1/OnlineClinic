@@ -48,3 +48,4 @@ public class VisitSDJpaService implements VisitService {
         visitRepository.deleteById(aLong);
     }
 }
+//spring.profiles.active=springdatajpa
