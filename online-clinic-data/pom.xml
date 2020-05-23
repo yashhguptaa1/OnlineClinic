@@ -11,6 +11,8 @@
 
     <artifactId>online-clinic-data</artifactId>
 
+    <!-- on not using below property we get error unable to find main package -->
+
     <properties>
         <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
     </properties>
