@@ -57,7 +57,7 @@ class GuardianControllerTest {
     }
 
 
-    @Test
+    /*@Test
     void findGuardians() throws Exception {
 
         mockMvc.perform(get("/guardians/find"))
@@ -65,7 +65,7 @@ class GuardianControllerTest {
                 .andExpect(view().name("notimplemented"));
 
         //verifyZeroInteractions(guardianService);
-    }
+    }*/
 
     @Test
     void displayOwner() throws Exception {
