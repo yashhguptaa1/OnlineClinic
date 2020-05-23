@@ -14,7 +14,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.*;
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -64,5 +65,17 @@ class GuardianControllerTest {
                 .andExpect(view().name("notimplemented"));
 
         //verifyZeroInteractions(guardianService);
+    }
+
+    @Test
+    void displayOwner() throws Exception {
+
+        when(guardianService.findById(anyLong())).thenReturn(Guardian.builder().id(1L).build());
+
+        mockMvc.perform(get("/guardians/1"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("guardians/guardianDetails"))
+                .andExpect(model().attribute("guardian",hasProperty("id",is(1L))));
+
     }
 }
