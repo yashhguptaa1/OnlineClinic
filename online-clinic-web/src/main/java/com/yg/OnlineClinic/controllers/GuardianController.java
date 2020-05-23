@@ -29,7 +29,7 @@ public class GuardianController {
         return "guardians/index";
     }
 
-    @RequestMapping("/owners/find")
+    @RequestMapping("/guardians/find")
     public String findGuardians(){
         return "notimplemented";
     }
