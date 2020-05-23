@@ -8,6 +8,7 @@ import com.yg.OnlineClinic.services.PetTypeService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 
@@ -86,5 +87,10 @@ public class GuardianMapService extends AbstractMapService<Guardian,Long> implem
     public void deleteById(Long id) {
         super.deleteById(id);
 
+    }
+
+    @Override
+    public List<Guardian> findAllByLastNameLike(String lastName) {
+        return null;
     }
 }
